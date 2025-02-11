@@ -10,7 +10,7 @@ L.tileLayer.wms('https://idem.comunidad.madrid/geoidem/UnidadesAdministrativas/w
 }).addTo(map);
 
 // Load GeoJSON data
-fetch('path_to_your_geojson_file.geojson')
+fetch('path_to_your_geojson_file.geojson') //ADjust this with the geojson file name
     .then(response => response.json())
     .then(data => {
         L.geoJSON(data, {
