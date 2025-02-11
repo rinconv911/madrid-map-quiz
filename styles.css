@@ -1,0 +1,10 @@
+#map {
+    height: 80vh;
+    width: 100%;
+}
+
+#prompt {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 20px;
+}
