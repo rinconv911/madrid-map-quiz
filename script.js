@@ -1,9 +1,12 @@
 // Initialize the map
-var map = L.map('map').setView([40.4168, -3.7038], 9);
+var map = L.map('map').setView([40.4168, -3.7038], 10);
 
-// Add a base layer (optional)
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
+// Add IDEM Madrid WMS Layer
+L.tileLayer.wms('https://idem.comunidad.madrid/geoidem/UnidadesAdministrativas/wms?request=GetCapabilities', {
+    layers: 'IDEM_CM_UNID_ADMIN', // Adjust this based on available layers
+    format: 'image/png',
+    transparent: true,
+    attribution: '© Comunidad de Madrid - IDEM'
 }).addTo(map);
 
 // Load GeoJSON data
